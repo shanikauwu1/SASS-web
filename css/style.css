@@ -122,25 +122,186 @@ hr{
     padding: 30px 0;
 }
 
-.testimonials-text{
+.testimonials .testimonials-text{
     color: #fff;
     width: 60%;
 }
 .boxes{
-   
+     display: grid;
+     grid-template-columns:  repeat(3, 1fr);
+     gap: 30px;
+/*    
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 20px; */
 }
 
 .card{
     background-color: #fff;
     border-radius: 10px;
-    margin: 10px 0;
+    margin: 10px 0 30px;
     padding: 20px;
+    color: #333;
+    
 }
+
+.testimonials .card p:first-child{
+    font-style: italic;
+
+}
+
+.testimonials .card p:nth-child(2){
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* pricing */
+
+.pricing-grid{
+    display: grid;
+    grid-template-columns:  repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.pricing .pricing-card-subtitle{
+    margin-bottom: 20px;
+}
+
+.pricing .pricing-card-price {
+    margin-bottom: 20px;
+    padding: 20px 0;
+    border-bottom: solid 1px #ccc;
+}
+.pricing ul {
+    margin: 20px 0;
+   
+}
+
+.pricing ul li {
+    margin: 10px 0;
+   
+}
+.pricing ul li i{
+    margin:  0 10px 0;
+   
+}
+.pricing button{
+    margin-bottom: 20px;
+}
+.pricing .pricing-footer{
+    margin:30px 0 ;
+}
+
+/* FAQs */
+
+.faq{
+    padding: 40px 0;
+}
+
+.faq .fqa-group{
+    padding: 0 0 20px 0;
+    border-bottom: solid 1px #ccc;
+}
+
+.faq .fqa-group .faq-group-header{
+    padding: 20px 0;
+    margin-bottom: 10px;
+    position: relative;
+}
+.faq .fqa-group .faq-group-header h4{
+   width: 95%;
+   font-weight: 600;
+}
+.faq .fqa-group .faq-group-header i{
+   
+    position: absolute;
+    right: 0;
+    top: 40px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.faq .fqa-group .faq-group-body {
+   display: none;
+}
+.faq .fqa-group .faq-group-body.open {
+    display: block;
+ }
+
+ .faq ul.fqa-menu{
+    width: 400px;
+    margin: auto;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ddd;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+ }
+
+ .faq ul.fqa-menu li{
+    padding:  10px 20px;
+    border-radius: 5px;
+    text-align: center;
+
+ }
+
+ .faq ul.fqa-menu li.active{
+    background-color: var(--primary-color);
+    color: #fff;
+ }
+
+ /* footer */
+ .footer{
+    padding: 50px 0;
+    margin: 20px 0;
+ }
+ .footer .footer-grid{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 30px;
+    justify-content: baseline;
+    
+ }
+
+ .footer  input[type='email']{
+    padding:  10px;
+    border-radius: 5px;
+    border: solid 1px #ccc;
+    width: 100%;
+  
+ }
+
+ .footer .footer-grid i{
+    margin: 3px 15px 30px 0;
+    font-size: medium;
+   
+ }
+
+ .footer .footer-grid form{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    gap: 10px;
+ }
+ .footer .footer-grid h4{
+    margin: 5px 0 15px;
+ }
+
+ .footer .footer-grid ul li{
+    font-weight: lighter;
+    line-height: 2.5;
+    font-size: 0.9rem;
+    color: #ccc;
+ }
+ .footer p{
+    margin: 5px 0 15px;
+    font-weight: lighter;
+    font-size: 0.8rem;
+ }
 /* utility classes */
 
 .container{
@@ -159,10 +320,17 @@ hr{
 
 .bg-black{
     background-color: black;
+    color: #fff;
 }
 
 .bg-light{
     background-color: #fff;
+    color: #333;
+   
+}
+
+.bg-gray{
+    background-color: #DFDEE2;
 }
 .btn{
     background-color: var(--gray-color);
@@ -187,7 +355,7 @@ hr{
 }
 .btn-dark{
     background-color: var(--dark-color);
-    color: #fff;
+    color: #333;
 }
 
 .btn-block{
