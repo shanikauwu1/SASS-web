@@ -398,3 +398,119 @@ hr{
 .text-center{
     text-align: center;
 }
+/* hamburgar menu */
+
+.hamburger-menu{
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    color: #333;
+    font-size: 1.6rem;
+}
+
+.mobile-menu{
+    display: none;
+}
+
+/* media queries */
+@media (max-width:960px) {
+ .text-xxl{
+    font-size: 2.5rem;
+ }
+
+}
+
+@media (max-width:670px) {
+
+body{
+    padding: 0 20px;
+}    
+ .navbar .menu{
+    display: none;
+ }
+.hamburger-menu{
+    display: block;
+    z-index: 600;
+   
+}
+.mobile-menu{
+    display:block;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 250px;
+    height: 100%;
+    z-index: 100;
+    background-color:#DFDEE2;
+    border: none;
+    box-shadow:0px 0px 10px rgba(0,0,0,0.2);
+    transition: right 0.3s ease-in-out;
+
+}
+.navbar .mobile-menu ul  {
+    margin-top: 100px;
+    display: list-item;
+    align-items: center;
+    padding-right: 20px;
+}
+
+.navbar ul li {
+margin: 10px 0;
+}
+.navbar ul li a {
+    display: inline-block;
+    font-size: 18px;
+}
+
+.mobile-menu.active{
+    right: 0;
+}
+
+/* hero section */
+
+.hero .container{
+    background-image: url('/images/hero-bg-mobile.png');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 350px 400px;
+    height: 810px;
+}
+
+.video .video-img {
+    max-width: 75%;
+}
+
+.text-xl {
+    font-size: 2.0rem;
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 10px 0 ;
+}
+.testimonials .testimonials-text {
+    color: #fff;
+     width: 100%; 
+}
+.boxes {
+    display: block;
+    
+}
+
+.footer .footer-grid {
+    display: block; 
+    text-align: center;
+}
+
+.footer p {
+    margin: 38px 0 15px;
+    font-size: 0.6rem;
+    text-align: center;
+}
+}
+
+
+@media (max-width:500px) {
+
+
+}
